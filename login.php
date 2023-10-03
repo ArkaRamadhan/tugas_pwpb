@@ -10,6 +10,24 @@
         <title>Login - SB Admin</title>
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <style>
+            .input_box {
+                display: flex;
+                align-items: center;
+                max-width: 500px;
+            }
+
+            .input_box input {
+                padding: 10px 0;
+            }
+
+            .input_box img {
+                width: 35px;
+                cursor: pointer;
+                display: flex;
+                margin-left: -10%;
+            }
+        </style>
     </head>
     <body class="bg-primary">
         <div id="layoutAuthentication">
@@ -26,10 +44,27 @@
                                                 <input class="form-control" id="inputEmail" type="text" placeholder="name@example.com" name="username" />
                                                 <label for="inputEmail">Username</label>
                                             </div>
-                                            <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputPassword" type="password" placeholder="Password" name="password"/>
+                                            <div class="form-floating mb-3 input_box">
+                                                <input class="form-control" id="inputPassword" type="password" placeholder="Password" name="password" id="password"/>
                                                 <label for="inputPassword">Password</label>
+                                                <img src="assets/img/eye-close.png" id="eyeicon">
                                             </div>
+
+                                            <script>
+                                                let eyeicon = document.getElementById("eyeicon");
+                                                let password = document.getElementById("inputPassword");
+
+                                                eyeicon.onclick = function(){
+                                                    if (password.type == "password"){
+                                                        password.type = "text";
+                                                        eyeicon.src = "assets/img/eye-open.png";
+                                                    }else {
+                                                        password.type = "password";
+                                                        eyeicon.src = "assets/img/eye-close.png";
+                                                    }
+                                                }
+                                            </script>
+
                                             <div class="form-check mb-3">
                                                 <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" />
                                                 <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
@@ -53,12 +88,7 @@
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
+                            <div class="text-muted">Copyright &copy; Arka 2023</div>
                         </div>
                     </div>
                 </footer>

@@ -40,6 +40,7 @@
         </ul>
     </nav>
     <div id="layoutSidenav">
+    <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
@@ -50,26 +51,26 @@
                             Dashboard
                         </a>
                         <div class="sb-sidenav-menu-heading">Interface</div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Data
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="tabel_user.php">Tabel user</a>
-                                </nav>
-                            </div>
-                        <div class="sb-sidenav-menu-heading">Addons</div>
-                        <a class="nav-link" href="tables.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Tables
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            Data
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="tabel_user.php">Tabel user</a>
+                                <a class="nav-link" href="tables.php">Tabel buku</a>
+                                <a class="nav-link" href="tabel_admin.php">Tabel admin</a>
+                                <a class="nav-link" href="tabel_operator.php">Tabel operator</a>
+                            </nav>
+                        </div>
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-                    Operator
+                    User
                 </div>
             </nav>
         </div>
@@ -82,7 +83,7 @@
         <h2 class="bg-light p-2 rounded  text-center text-dark" style="color: black;"> Data Anggota  </h2>
         <hr class="my-3">
         <div class="text-center">
-          <img src="../user/gambar/<?= $d["gambar"]; ?>" width="200" class="img-thumnail mt-3"> 
+          <img src="gambar/<?= $d["gambar"]; ?>" width="200" class="img-thumnail mt-3"> 
         </div>
         <h6 class="text-dark text-center" style="font-size: 16px; margin: top 20px;">Nama  : <?= $d["nama"]; ?></h6>
         <h6 class="text-dark text-center" style="font-size: 16px;">Alamat  : <?= $d["alamat"]; ?></h6>

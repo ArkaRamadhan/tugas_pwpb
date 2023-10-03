@@ -57,20 +57,17 @@
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="tabel_user.php">Tabel user</a>
+                                <a class="nav-link" href="tables.php">Tabel Buku</a>
                                 <a class="nav-link" href="tabel_admin.php">Tabel admin</a>
                                 <a class="nav-link" href="tabel_operator.php">Tabel operator</a>
                             </nav>
                         </div>
-                        <div class="sb-sidenav-menu-heading">Addons</div>
-                        <a class="nav-link" href="tables.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Tables
-                        </a>
+
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-                    Start Bootstrap
+                    Operator
                 </div>
             </nav>
         </div>
@@ -218,7 +215,6 @@
                                         <th>Sinopsis</th>
                                         <th>No ISBN</th>
                                         <th>Foto</th>
-                                        <th>Opsi</th>
                                     </tr>
                                 </thead>
                                 <tfoot>
@@ -232,7 +228,6 @@
                                         <th>Sinopsis</th>
                                         <th>No ISBN</th>
                                         <th>Foto</th>
-                                        <th>Opsi</th>
                                     </tr>
                                 </tfoot>
                                 <tbody>
@@ -273,12 +268,6 @@
                                                 <img src="../admin/gambar/<?php echo $d['foto'] ?>" width="35" height="40">
                                             </td>
 
-                                            <td>
-                                                <a href="edit.php?id_buku=<?php echo $d['id_buku']; ?>"
-                                                    name="id_user">EDIT</a>
-                                                <a href="hapus.php?id_buku=<?php echo $d['id_buku']; ?>">HAPUS</a>
-                                            </td>
-
                                         </tr>
                                         <?php
                                     }
@@ -292,12 +281,7 @@
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2023</div>
-                        <div>
-                            <a href="#">Privacy Policy</a>
-                            &middot;
-                            <a href="#">Terms &amp; Conditions</a>
-                        </div>
+                        <div class="text-muted">Copyright &copy; Arka 2023</div>
                     </div>
                 </div>
             </footer>
@@ -365,29 +349,29 @@
         });
     </script>
 
-    <script>
+<script>
         var ctx = document.getElementById("myBar2Chart").getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Romace", "Horror", "Komedi"],
+                labels: ["GagasMedia", "Erlangga", "Gramedia Pustaka Utama"],
                 datasets: [{
-                    label: 'Genre yang sangat diminati',
+                    label: 'Penerbit buku terpaporit',
                     data: [
                         <?php
-                        $data = $koneksi->query("SELECT genre FROM daftar_buku WHERE genre='Romance'");
+                        $data = $koneksi->query("SELECT penerbit FROM daftar_buku WHERE penerbit= 'GagasMedia'");
                         $resF = $data->num_rows;
                         echo $resF;
                         ?>,
 
                         <?php
-                        $data = $koneksi->query("SELECT genre FROM daftar_buku WHERE genre='Horror'");
+                        $data = $koneksi->query("SELECT penerbit FROM daftar_buku WHERE penerbit='Erlangga'");
                         $resF = $data->num_rows;
                         echo $resF;
                         ?>,
 
                         <?php
-                        $data = $koneksi->query("SELECT genre FROM daftar_buku WHERE genre='Komedi'");
+                        $data = $koneksi->query("SELECT penerbit FROM daftar_buku WHERE penerbit='Gramedia Pustaka Utama'");
                         $resF = $data->num_rows;
                         echo $resF;
                         ?>

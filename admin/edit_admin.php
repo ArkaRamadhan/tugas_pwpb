@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +11,7 @@
 	<title>Login - SB Admin</title>
 	<link href="../css/styles.css" rel="stylesheet" />
 	<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<style>
 		.file-upload {
 			background-color: #ffffff;
@@ -133,62 +132,30 @@
 								<div class="card-body">
 									<?php
 									include 'koneksi.php';
-									$id = $_GET['id_buku'];
-									$data = mysqli_query($koneksi, "select * from daftar_buku where id_buku='$id'")or die(mysql_error());
+									$id = $_GET['id_admin'];
+									$data = mysqli_query($koneksi, "select * from data_admin where id_admin='$id'");
 									$nomor = 1;
 									while ($d = mysqli_fetch_array($data)) {
 										?>
-										<form method="POST" action="update.php" enctype="multipart/form-data">
+										<form method="POST" action="update_admin.php" enctype="multipart/form-data">
 											<div class="form-floating mb-3 ">
-												<input type="hidden" name="id_buku" value="<?php echo $d['id_buku']; ?>">
-												<input type="text" name="judul"  placeholder="Judul Buku" value="<?php echo $d['judul']; ?>"
-												class="form-control" id="judul_buku" >
-												<label for="judul_buku">Judul Buku</label>
+												<input type="hidden" name="id_admin" value="<?php echo $d['id_admin']; ?>">
+												<input type="text" name="nama"  placeholder="Nama" value="<?php echo $d['nama']; ?>"
+												class="form-control" id="nama" >
+												<label for="nama">Nama</label>
 											</div>
 
 											<div class="row">
 												<div class="form-floating mb-3 col">
-													<input type="text" name="penulis"  placeholder="Penulis" value="<?php echo $d['penulis']; ?>" class="form-control">
-													<label for="penulis" style="margin-left:12px">Penulis</label>
+													<input type="text" name="username"  placeholder="Username" value="<?php echo $d['username']; ?>" class="form-control" id="username">
+													<label for="username" style="margin-left:12px">Username</label>
 												</div>
 
 												<div class="form-floating mb-3 col">
-													<input type="text" name="penerbit" id="penerbit"  placeholder="Penerbit" value="<?php echo $d['penerbit']; ?>" class="form-control">
-													<label for="penerbit" style="margin-left:12px">Penerbit</label>
+													<input type="text" name="password" id="password"  placeholder="Password" value="<?php echo $d['password']; ?>" class="form-control" id="password">
+													<label for="password" style="margin-left:12px">Password</label>
 												</div>
 											</div>
-
-											<div class="form-floating mb-3 col">
-												<select name="genre" id="genre" class="form-select col" value="<?php echo $d['genre']; ?>" aria-label="Default select example" ">
-													<option selected>Genre</option>
-													<option value="Romance">Romance</option>
-													<option value="Horror">Horror</option>
-													<option value="Komedi">Komedi</option>
-													<option value="Fantasi">Fantasi</option>
-													<option value="Thriller">Thriller</option>
-													<option value="Historical">Historical</option>
-												</select>
-												<label for="genre">Genre</label>
-											</div>
-
-											<div class="row">
-												<div class="form-floating mb-3 col">
-													<input type="date" name="tahun_terbit" id="tahun_terbit" placeholder="Tahun Terbit" value="<?php echo $d['tahun_terbit']; ?>" class="form-control">
-													<label for="tahun_terbit" style="margin-left:12px">Tahun Terbit</label>
-												</div>
-
-												<div class="form-floating mb-3 col">
-													<input type="text" placeholder="NO ISBN" id="no_isbn" name="no_isbn" value="<?php echo $d['no_isbn']; ?>" class="form-control">
-													<label for="no_isbn" style="margin-left:12px">NO ISBN</label>
-												</div>
-											</div>
-
-
-											<div class="form-floating mb-3 col">
-												<input type="text" id="sinopsis" name="sinopsis" placeholder="Sinopsis" value="<?php echo $d['sinopsis']; ?>" class="form-control">
-												<label for="sinopsis">Sinopsis</label>
-											</div>
-
 
 											<script class="jsbin"
 												src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>

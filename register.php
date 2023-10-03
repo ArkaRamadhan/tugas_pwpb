@@ -158,8 +158,12 @@ if (isset($_POST['register'])) {
                                             <label for="alamat">Alamat</label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" id="jenis_kelamin" type="text"
+                                            <select class="form-select form-select-lg mb-3" id="jenis_kelamin" type="text"
                                                 placeholder="jenis_kelamin" name="jenis_kelamin" />
+                                                <option selected>Pilih Jenis Kelamin</option>
+                                                <option value="Laki-laki">Laki-laki</option>
+                                                <option value="Perempuan">Perempuan</option>
+                                            </select>
                                             <label for="jenis_kelamin">Jenis_kelamin</label>
                                         </div>
                                         <div class="form-floating mb-3">
@@ -253,7 +257,7 @@ if (isset($_POST['register'])) {
             <footer class="py-4 bg-light mt-5">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                        <div class="text-muted">Copyright &copy; Arka 2023</div>
                     </div>
                 </div>
             </footer>

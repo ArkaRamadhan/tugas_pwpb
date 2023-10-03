@@ -277,9 +277,14 @@
 											</div>
 											<div class="form-floating mb-3 col">
 												<input type="hidden" name="id_admin">
-												<input class="form-control" id="nama" type="text" placeholder="Nama"
-													name="penerbit" />
-												<label for="nama" style="margin-left:12px">Penerbit</label>
+												<input class="form-control" id="inputPenerbit" type="text" placeholder="Nama"
+													name="penerbit" list="penerbit"/>
+												<label for="penerbit" style="margin-left:12px">Penerbit</label>
+												<datalist id="penerbit">
+													<option value="GagasMedia">
+													<option value="Erlangga">
+													<option value="Gramedia Pustaka Utama">
+												</datalist>
 											</div>
 										</div>
 										<div class="form-floating mb-3">
@@ -384,7 +389,7 @@
 			<footer class="py-4 bg-light mt-5">
 				<div class="container-fluid px-4">
 					<div class="d-flex align-items-center justify-content-between small">
-						<div class="text-muted">Copyright &copy; Your Website 2023</div>
+						<div class="text-muted">Copyright &copy; Arka 2023</div>
 					</div>
 				</div>
 			</footer>

@@ -56,19 +56,15 @@
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="tables.php">Tabel Buku</a>
                                 <a class="nav-link" href="tabel_user.php">Tabel user</a>
                             </nav>
                         </div>
-                        <div class="sb-sidenav-menu-heading">Addons</div>
-                        <a class="nav-link" href="tables.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Tables
-                        </a>
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-                    Start Bootstrap
+                    User
                 </div>
             </nav>
         </div>
@@ -288,29 +284,29 @@
         });
     </script>
 
-    <script>
+<script>
         var ctx = document.getElementById("myBar2Chart").getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Romace", "Horror", "Komedi"],
+                labels: ["GagasMedia", "Erlangga", "Gramedia Pustaka Utama"],
                 datasets: [{
-                    label: 'Genre yang sangat diminati',
+                    label: 'Penerbit buku terpaporit',
                     data: [
                         <?php
-                        $data = $koneksi->query("SELECT genre FROM daftar_buku WHERE genre='Romance'");
+                        $data = $koneksi->query("SELECT penerbit FROM daftar_buku WHERE penerbit= 'GagasMedia'");
                         $resF = $data->num_rows;
                         echo $resF;
                         ?>,
 
                         <?php
-                        $data = $koneksi->query("SELECT genre FROM daftar_buku WHERE genre='Horror'");
+                        $data = $koneksi->query("SELECT penerbit FROM daftar_buku WHERE penerbit='Erlangga'");
                         $resF = $data->num_rows;
                         echo $resF;
                         ?>,
 
                         <?php
-                        $data = $koneksi->query("SELECT genre FROM daftar_buku WHERE genre='Komedi'");
+                        $data = $koneksi->query("SELECT penerbit FROM daftar_buku WHERE penerbit='Gramedia Pustaka Utama'");
                         $resF = $data->num_rows;
                         echo $resF;
                         ?>

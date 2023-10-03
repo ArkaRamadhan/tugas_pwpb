@@ -67,29 +67,25 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="tabel_user.php">Tabel user</a>
                                     <a class="nav-link" href="tabel_admin.php">Tabel admin</a>
+                                    <a class="nav-link" href="tables.php">Tabel buku</a>
                                     <a class="nav-link" href="tabel_operator.php">Tabel operator</a>
                                 </nav>
                             </div>
-                            <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="tables.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
-                            </a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                        Admin
                     </div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Tables</h1>
+                        <h1 class="mt-4">Tabel User</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Tables</li>
+                            <li class="breadcrumb-item active">Tabel User</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-header">
@@ -155,10 +151,11 @@
                                                 </td>
 
                                                 <td>
+                                                    <a href="hapus_user.php?id_user=<?php echo $d['id_user']; ?>"
+                                                        class="btn btn-outline-danger">HAPUS</a>
                                                     <a href="details.php?id_user=<?php echo $d['id_user']; ?>"
                                                         class="btn btn-success">Details <i
-                                                            class="fa fa-info-circle text-white"></i></a></button>
-
+                                                            class="fa fa-info-circle text-white"></i></a>
                                                 </td>
                                             </tr>
                                             <?php

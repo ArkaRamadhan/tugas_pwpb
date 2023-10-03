@@ -31,6 +31,6 @@ if(!in_array($ext,$ekstensi) ) {
 
 // mengalihkan halaman kembali ke index.php
 
-header("location:index.php");
+header("location:tabel_operator.php");
 
 ?>

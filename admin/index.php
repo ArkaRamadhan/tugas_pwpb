@@ -66,7 +66,7 @@
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-                    Start Bootstrap
+                    Admin
                 </div>
             </nav>
         </div>
@@ -289,12 +289,7 @@
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2023</div>
-                        <div>
-                            <a href="#">Privacy Policy</a>
-                            &middot;
-                            <a href="#">Terms &amp; Conditions</a>
-                        </div>
+                        <div class="text-muted">Copyright &copy; Arka 2023</div>
                     </div>
                 </div>
             </footer>
@@ -385,25 +380,24 @@
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Romace", "Horror", "Komedi"],
+                labels: ["GagasMedia", "Erlangga", "Gramedia Pustaka Utama"],
                 datasets: [{
                     label: 'Penerbit buku terpaporit',
                     data: [
                         <?php
-                        $data = $koneksi->query("SELECT genre FROM daftar_buku WHERE penerbit= ''");
-                        strtolower($data);
+                        $data = $koneksi->query("SELECT penerbit FROM daftar_buku WHERE penerbit= 'GagasMedia'");
                         $resF = $data->num_rows;
                         echo $resF;
                         ?>,
 
                         <?php
-                        $data = $koneksi->query("SELECT genre FROM daftar_buku WHERE penerbit='Horror'");
+                        $data = $koneksi->query("SELECT penerbit FROM daftar_buku WHERE penerbit='Erlangga'");
                         $resF = $data->num_rows;
                         echo $resF;
                         ?>,
 
                         <?php
-                        $data = $koneksi->query("SELECT genre FROM daftar_buku WHERE penerbit='Komedi'");
+                        $data = $koneksi->query("SELECT penerbit FROM daftar_buku WHERE penerbit='Gramedia Pustaka Utama'");
                         $resF = $data->num_rows;
                         echo $resF;
                         ?>

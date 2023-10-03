@@ -18,20 +18,17 @@ $filename = $_FILES['foto']['name'];
 $ukuran = $_FILES['foto']['size'];
 $ext = pathinfo($filename, PATHINFO_EXTENSION);
 
-if(!in_array($ext,$ekstensi) ) {
-	header("location:index.php?alert=gagal_ekstensi");
-}else{
-	if($ukuran < 1044070){
 		$foto = $rand.'_'.$filename;
 		move_uploaded_file($_FILES['foto']['tmp_name'], 'gambar/'.$rand.'_'.$filename);
-		mysqli_query($koneksi,"update daftar_buku set judul='$judul', penulis='$penulis', penerbit='$penerbit', tahun_terbit='$tahun_terbit', genre='$genre', no_isbn='$no_isbn', foto='$foto' where id_buku='$id'");
-		header("location:index.php?alert=berhasil");
-	}else{
-		header("location:index.php?alert=gagak_ukuran");
-	}
-}
+		if (empty($filename)) {
+			mysqli_query($koneksi,"update daftar_buku set judul='$judul', penulis='$penulis', penerbit='$penerbit', tahun_terbit='$tahun_terbit', genre='$genre', sinopsis='$sinopsis', no_isbn='$no_isbn' where id_buku='$id'");
+			header("location:index.php?alert=berhasil");
+		}else{
+			mysqli_query($koneksi,"update daftar_buku set judul='$judul', penulis='$penulis', penerbit='$penerbit', tahun_terbit='$tahun_terbit', genre='$genre', sinopsis='$sinopsis', no_isbn='$no_isbn', foto='$foto' where id_buku='$id'");
+			header("location:index.php?alert=berhasil");
+		}
+		
 
 // mengalihkan halaman kembali ke index.php
-header("location:index.php");
 
 ?>

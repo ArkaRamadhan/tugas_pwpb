@@ -60,16 +60,11 @@
                                     <a class="nav-link" href="tabel_user.php">Tabel user</a>
                                 </nav>
                             </div>
-                        <div class="sb-sidenav-menu-heading">Addons</div>
-                        <a class="nav-link" href="tables.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Tables
-                        </a>
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-                    Start Bootstrap
+                    User
                 </div>
             </nav>
         </div>

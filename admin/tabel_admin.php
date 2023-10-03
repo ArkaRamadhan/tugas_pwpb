@@ -71,30 +71,26 @@
                                 data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="tabel_user.php">Tabel user</a>
+                                    <a class="nav-link" href="tables.php">Tabel buku</a>
                                     <a class="nav-link" href="tabel_admin.php">Tabel admin</a>
                                     <a class="nav-link" href="tabel_operator.php">Tabel operator</a>
                                 </nav>
                             </div>
-                            <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="tables.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
-                            </a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                        Admin
                     </div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Tables</h1>
+                        <h1 class="mt-4">Tabel Admin</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Tables</li>
+                            <li class="breadcrumb-item active">Tabel Admin</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-header">
@@ -104,9 +100,9 @@
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <div class="d-flex justify-content-center">
-                                    <a href="tambah_admin.php" class="btn btn-outline-primary"
-                                        style="text-decoration:none; margin-right: 0.5rem;">+
-                                        TAMBAH ADMIN</a>
+                                        <a href="tambah_admin.php" class="btn btn-outline-primary"
+                                            style="text-decoration:none; margin-right: 0.5rem;">+
+                                            TAMBAH ADMIN</a>
                                     </div>
 
                                     <thead>
@@ -116,6 +112,7 @@
                                             <th>Username</th>
                                             <th>Password</th>
                                             <th>Foto</th>
+                                            <th>Opsi</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -125,6 +122,7 @@
                                             <th>Username</th>
                                             <th>Password</th>
                                             <th>Foto</th>
+                                            <th>Opsi</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -152,6 +150,12 @@
                                                 <td>
                                                     <img src="foto_admin/<?php echo $d['foto'] ?>" width="35" height="40">
                                                 </td>
+                                                <td>
+                                                    <a href="edit_admin.php?id_admin=<?php echo $d['id_admin']; ?>" name="id_admin"
+                                                        class="btn btn-outline-success" style="width: 77px;">EDIT</a>
+                                                    <a href="hapus_admin.php?id_admin=<?php echo $d['id_admin']; ?>"
+                                                        class="btn btn-outline-danger">HAPUS</a>
+                                                </td>
                                             </tr>
                                             <?php
                                         }
@@ -164,7 +168,7 @@
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy;Arkha 2023</div>
+                            <div class="text-muted">Copyright &copy; Arkha 2023</div>
                         </div>
                     </div>
                 </footer>
