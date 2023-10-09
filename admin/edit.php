@@ -134,7 +134,7 @@
 									<?php
 									include 'koneksi.php';
 									$id = $_GET['id_buku'];
-									$data = mysqli_query($koneksi, "select * from daftar_buku where id_buku='$id'")or die(mysql_error());
+									$data = mysqli_query($koneksi, "select * from daftar_buku where id_buku='$id'");
 									$nomor = 1;
 									while ($d = mysqli_fetch_array($data)) {
 										?>

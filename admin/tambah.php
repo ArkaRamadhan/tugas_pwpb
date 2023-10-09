@@ -1,136 +1,3 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-	<title>CRUD PHP dan MySQLi - WWW.MALASNGODING.COM</title>
-</head>
-<body>
-	
-	<br/>
-	<a href="index.php">KEMBALI</a>
-	<br/>
-	<br/>
-	<h3>TAMBAH DATA MAHASISWA</h3>
-	<form method="post" action="tambah_aksi.php" enctype="multipart/form-data">
-	<table>
-				<tr>
-					<td>Judul Buku</td>
-					<td>
-						<input type="hidden" name="id">
-						<input type="text" name="judul">
-					</td>
-				</tr>
-				<tr>
-					<td>Penulis</td>
-					<td><input type="text" name="penulis"></td>
-				</tr>
-				<tr>
-					<td>penerbit</td>
-					<td><input type="text" name="penerbit"></td>
-				</tr>
-				<tr>
-					<td>Tahun terbit</td>
-					<td><input type="date" name="tahun_terbit"></td>
-				</tr>
-				<tr>
-					<td>Genre</td>
-					<td><input type="text" name="genre"></td>
-				</tr>
-				<tr>
-					<td>Sinopsis</td>
-					<td><input type="text" name="sinopsis"></td>
-				</tr>
-				<tr>
-					<td>No ISBN</td>
-					<td><input type="text" name="no_isbn"></td>
-				</tr>
-					<label>Foto :</label>
-					<input type="file" name="foto" required="required">
-					<p style="color: red">Ekstensi yang diperbolehkan .png | .jpg | .jpeg | .gif</p>
-				<tr>
-					<td></td>
-					<td><input type="submit" value="SIMPAN"></td>
-				</tr>
-			</table>
-	</form>
-</body>
-</html> -->
-
-
-<!-- <html>
-
-<head>
-	<title>CRUD PHP dan MySQLi - WWW.MALASNGODING.COM</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-	<link href="../css/styles.css" rel="stylesheet" />
-	<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-</head>
-
-<body class="bg-primary">
-
-	<div id="layoutAuthentication">
-		<div id="layoutAuthentication_content">
-			<main>
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-lg-5">
-							<div class="card shadow-lg border-0 rounded-lg mt-5">
-								<div class="card-header">
-									<h3 class="text-center font-weight-light my-4">Tambah Admin</h3>
-								</div>
-
-								
-								<form method="post" action="admin_aksi.php" enctype="multipart/form-data">
-
-									<div class="form-floating mb-3 ">
-									<input type="hidden" name="id_admin">
-										<input class="form-control" id="nama" type="text" placeholder="Nama"
-											name="nama" />
-										<label for="nama">Nama</label>
-									</div>
-
-
-
-									<div class="form-floating mb-3">
-										<input type="text" name="username" class="form-control">
-										<label for="username">Username</label>
-									</div>
-
-
-
-									<tr>
-										<td>Password</td>
-										<td><input type="text" name="password"></td>
-									</tr>
-									<tr>
-										<label>Foto :</label>
-										<input type="file" name="foto" required="required">
-										<p style="color: red">Ekstensi yang diperbolehkan .png | .jpg | .jpeg | .gif
-										</p>
-									</tr>
-									<tr>
-										<td></td>
-										<td><input type="submit" value="SIMPAN"></td>
-									</tr>
-									</table>
-								</form>
-								<script
-									src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-									crossorigin="anonymous"></script>
-							</div>
-						</div>
-					</div>
-				</div>
-		</div>
-	</div>
-
-
-
-</body>
-
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -264,21 +131,18 @@
 									<form method="POST" action="tambah_aksi.php" enctype="multipart/form-data">
 										<div class="form-floating mb-3 ">
 											<input type="hidden" name="id_buku">
-											<input class="form-control" id="nama" type="text" placeholder="Nama"
-												name="judul" />
+											<input class="form-control" id="nama" type="text" placeholder="Nama" name="judul" />
 											<label for="nama">Judul</label>
 										</div>
 										<div class="row">
 											<div class="form-floating mb-3 col">
 												<input type="hidden" name="id_admin">
-												<input class="form-control" id="nama" type="text" placeholder="Nama"
-													name="penulis" />
+												<input class="form-control" id="nama" type="text" placeholder="Nama" name="penulis" />
 												<label for="nama" style="margin-left:12px">Penulis</label>
 											</div>
 											<div class="form-floating mb-3 col">
 												<input type="hidden" name="id_admin">
-												<input class="form-control" id="inputPenerbit" type="text" placeholder="Nama"
-													name="penerbit" list="penerbit"/>
+												<input class="form-control" id="inputPenerbit" type="text" placeholder="Nama" name="penerbit" list="penerbit" />
 												<label for="penerbit" style="margin-left:12px">Penerbit</label>
 												<datalist id="penerbit">
 													<option value="GagasMedia">
@@ -288,47 +152,42 @@
 											</div>
 										</div>
 										<div class="form-floating mb-3">
-											<input class="form-control" id="inputEmail" type="date"
-												placeholder="Username" name="tahun_terbit" />
+											<input class="form-control" id="inputEmail" type="date" placeholder="Username" name="tahun_terbit" />
 											<label for="inputEmail">Tahun terbit</label>
 										</div>
 										<div class="row">
 
-												<!-- <input class="form-control" id="inputPassword" type="text"
+											<!-- <input class="form-control" id="inputPassword" type="text"
 													placeholder="Password" name="genre" />
 												<label for="inputPassword" style="margin-left:12px">Genre</label> -->
-												<select name="genre" id="genre" class="form-select col" aria-label="Default select example" style="height:3.6rem;margin-left:12px">
-													<option selected>Genre</option>
-													<option value="Romance">Romance</option>
-													<option value="Horror">Horror</option>
-													<option value="Komedi">Komedi</option>
-													<option value="Fantasi">Fantasi</option>
-													<option value="Thriller">Thriller</option>
-													<option value="Historical">Historical</option>
-												</select>
+											<select name="genre" id="genre" class="form-select col" aria-label="Default select example" style="height:3.6rem;margin-left:12px">
+												<option selected>Genre</option>
+												<option value="Romance">Romance</option>
+												<option value="Horror">Horror</option>
+												<option value="Komedi">Komedi</option>
+												<option value="Fantasi">Fantasi</option>
+												<option value="Thriller">Thriller</option>
+												<option value="Historical">Historical</option>
+											</select>
 
 											<div class="form-floating mb-3 col">
-												<input class="form-control" id="inputPassword" type="text"
-													placeholder="Password" name="no_isbn" />
+												<input class="form-control" id="inputPassword" type="text" placeholder="Password" name="no_isbn" />
 												<label for="inputPassword" style="margin-left:12px">No ISBN</label>
 											</div>
 										</div>
 
 										<div class="form-floating mb-3 col">
-											<input class="form-control" id="inputPassword" type="text"
-												placeholder="Password" name="sinopsis" />
+											<input class="form-control" id="inputPassword" type="text" placeholder="Password" name="sinopsis" />
 											<label for="inputPassword" style="margin-left:12px">Sinopsis</label>
 										</div>
-										<script class="jsbin"
-											src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+										<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 										<div class="file-upload" name="foto">
 											<!-- <button class="file-upload-btn" type="button"
 													onclick="$('.file-upload-input').trigger( 'click' )">Add
 													Image</button> -->
 
 											<div class="image-upload-wrap">
-												<input class="file-upload-input" type='file' onchange="readURL(this);"
-													accept="gambar/" name="foto" />
+												<input class="file-upload-input" type='file' onchange="readURL(this);" accept="gambar/" name="foto" />
 												<div class="drag-text">
 													<h3>Drag and drop a file or select add Image</h3>
 												</div>
@@ -336,8 +195,7 @@
 											<div class="file-upload-content">
 												<img class="file-upload-image" src="gambar" alt="your image" />
 												<div class="image-title-wrap">
-													<button type="button" onclick="removeUpload()"
-														class="remove-image">Remove <span class="image-title">Uploaded
+													<button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded
 															Image</span></button>
 												</div>
 											</div>
@@ -348,7 +206,7 @@
 
 													var reader = new FileReader();
 
-													reader.onload = function (e) {
+													reader.onload = function(e) {
 														$('.image-upload-wrap').hide();
 
 														$('.file-upload-image').attr('src', e.target.result);
@@ -369,7 +227,7 @@
 												$('.file-upload-content').hide();
 												$('.image-upload-wrap').show();
 											}
-											$('.image-upload-wrap').bind('dragover', function () {
+											$('.image-upload-wrap').bind('dragover', function() {
 												$('.image-upload-wrap').addClass('image-dropping');
 											});
 										</script>
@@ -395,8 +253,7 @@
 			</footer>
 		</div>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 	<script src="../js/scripts.js"></script>
 </body>
 

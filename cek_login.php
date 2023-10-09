@@ -10,7 +10,6 @@ if (isset($_POST['login'])) {
 
 	$hasil = mysqli_query($koneksi, "SELECT * FROM data_user WHERE username='$username'");
 
-	// cek username
 
 	if (mysqli_num_rows($hasil) === 1) {
 
@@ -59,6 +58,7 @@ $admin = mysqli_query($koneksi, "select * from data_admin where username='$usern
 $data_op = mysqli_fetch_assoc($admin);
 if ($data_op['username'] == "$username" && $data_op['password'] == "$password") {
 	$_SESSION['username'] = $username;
+	$_SESSION['login'] = true;
 
 	header("location:admin/index.php");
 }
