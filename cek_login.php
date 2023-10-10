@@ -58,8 +58,7 @@ $admin = mysqli_query($koneksi, "select * from data_admin where username='$usern
 $data_op = mysqli_fetch_assoc($admin);
 if ($data_op['username'] == "$username" && $data_op['password'] == "$password") {
 	$_SESSION['username'] = $username;
-	$_SESSION['login'] = true;
+	$_SESSION['status_admin'] = "login";
 
 	header("location:admin/index.php");
 }
-?>

@@ -323,7 +323,10 @@ if(!in_array($ext,$ekstensi) ) {
             $gambar = $rand . '_' . $filename;
             move_uploaded_file($_FILES['gambar']['tmp_name'], 'user/gambar/' . $rand . '_' . $filename);
             mysqli_query($koneksi, "insert into data_user values('', '$nama', '$alamat', '$jenis_kelamin', '$gambar', '$username', '$password')");
-            header("location:login.php?alert=berhasil");
+            echo "<script>
+                    alert('Berhasil menambahkan user baru');
+                </script>";
+            header("location:login.php");
             return mysqli_affected_rows($koneksi);
         } else {
             header("location:index.php?alert=salah ukuran");
